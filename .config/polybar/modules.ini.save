@@ -316,7 +316,7 @@ type = internal/date
 
 interval = 1.0
 
-time = %I:%M %p %Y-%m-%d%
+time = %I:%M %Y-%m-%d%
 
 format = <label>
 format-background = ${color.mf} 
@@ -733,25 +733,6 @@ label-urgent-padding = 1
 label-occupied-padding = 1
 label-empty-padding = 1
 
-
-[module/pulseaudio-control]
-type = custom/script
-tail = true
-label=%output%
-format-underline = ${color.blue}
-format-background = ${color.mf}
-format-foreground = ${color.fg}
-
-exec = ~/.config/polybar/scripts/pulseaudio-control.bash listen
-click-right = exec pavucontrol &
-click-left = ~/.config/polybar/scripts/pulseaudio-control.bash togmute
-click-middle = ~/.config/polybar/scripts/pulseaudio-control.bash next-sink
-scroll-up = ~/.config/polybar/scripts/pulseaudio-control.bash up
-scroll-down = ~/.config/polybar/scripts/pulseaudio-control.bash down
-label-padding = 2
-label-foreground = ${color.fg}
-
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______
 ;;	   / ____/ __ \/ ____/
@@ -760,4 +741,3 @@ label-foreground = ${color.fg}
 ;;	/_____/\____/_/       
 ;;
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
